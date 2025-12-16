@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zapatillas Store - Tienda Online Bolivia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS personalizado nuevo -->
+    <link rel="stylesheet" href="index-new.css">
+    
+    <!-- CSS original (opcional, para compatibilidad) -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navbar Mejorado -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <div class="logo-icon">
+                    <i class="bi bi-lightning-charge"></i>
+                </div>
+                Zapatillas Bolivia
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Características</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">Categorías</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#offers">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonios</a>
+                    </li>
+                </ul>
+                
+                <div class="auth-buttons d-flex align-items-center gap-2">
+                    <a href="auth.html" class="btn btn-outline-primary">
+                        <i class="bi bi-person me-1"></i> Mi Cuenta
+                    </a>
+                    <a href="login.html" class="btn btn-primary">
+                        <i class="bi bi-gear me-1"></i> Admin
+                    </a>
+                    <a href="#" class="btn btn-outline-dark position-relative">
+                        <i class="bi bi-cart"></i>
+                        <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Mejorada -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            Encuentra tus zapatillas perfectas en Bolivia
+                        </h1>
+                        <p class="hero-subtitle">
+                            Las mejores marcas y modelos al mejor precio en Bolivianos. 
+                            Calidad garantizada con envío a todo el país.
+                        </p>
+                        
+                        <div class="hero-buttons">
+                            <a href="#products" class="btn btn-primary btn-lg">
+                                <i class="bi bi-shop me-2"></i> Ver Colección
+                            </a>
+                            <a href="#offers" class="btn btn-outline-primary btn-lg">
+                                <i class="bi bi-tag me-2"></i> Ofertas Especiales
+                            </a>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" id="productCount">150+</span>
+                                <span class="stat-label">Productos</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="clientCount">2,500+</span>
+                                <span class="stat-label">Clientes</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="visitorCount">10,000+</span>
+                                <span class="stat-label">Visitas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" id="cityCount">9</span>
+                                <span class="stat-label">Ciudades</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="hero-image-container">
+                        <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                             alt="Zapatillas destacadas" 
+                             class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">¿Por qué elegirnos?</h2>
+                <p class="section-subtitle">
+                    Somos la tienda de zapatillas más confiable de Bolivia
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <h3 class="feature-title">Envío Gratis</h3>
+                        <p class="feature-text">
+                            Envío gratuito a todo Bolivia en compras mayores a Bs. 500
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="bi bi-shield-check"></i>
+                        </div>
+                        <h3 class="feature-title">Garantía</h3>
+                        <p class="feature-text">
+                            30 días de garantía en todos nuestros productos
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="bi bi-credit-card"></i>
+                        </div>
+                        <h3 class="feature-title">Pago Seguro</h3>
+                        <p class="feature-text">
+                            Pagos 100% seguros con múltiples opciones de pago
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="feature-card animate-on-scroll">
+                        <div class="feature-icon">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h3 class="feature-title">Soporte 24/7</h3>
+                        <p class="feature-text">
+                            Atención al cliente disponible las 24 horas
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Explora por Categoría</h2>
+                <p class="section-subtitle">
+                    Encuentra las zapatillas perfectas para cada ocasión
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1597045566677-8cf032ed6634?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Zapatillas para Hombres" 
+                             class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Hombres</h3>
+                            <p class="category-count">80+ Productos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1543163521-1bf539c55dd2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Zapatillas para Mujeres" 
+                             class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Mujeres</h3>
+                            <p class="category-count">65+ Productos</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="category-card animate-on-scroll">
+                        <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Zapatillas para Niños" 
+                             class="category-image">
+                        <div class="category-content">
+                            <h3 class="category-title">Niños</h3>
+                            <p class="category-count">45+ Productos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Productos Destacados</h2>
+                <p class="section-subtitle">
+                    Las zapatillas más vendidas de nuestra colección
+                </p>
+            </div>
+            
+            <div class="product-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="men">Hombres</button>
+                <button class="filter-btn" data-filter="women">Mujeres</button>
+                <button class="filter-btn" data-filter="kids">Niños</button>
+                <button class="filter-btn" data-filter="offer">Ofertas</button>
+            </div>
+            
+            <div class="row g-4" id="productsContainer">
+                <!-- Los productos se cargan dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="#" class="btn btn-primary btn-lg">
+                    <i class="bi bi-grid-3x3-gap me-2"></i> Ver Todos los Productos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offers Section -->
+    <section class="offers-section" id="offers">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Ofertas Especiales</h2>
+                <p class="section-subtitle">
+                    Aprovecha nuestros descuentos por tiempo limitado
+                </p>
+            </div>
+            
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="offer-card animate-on-scroll">
+                        <div class="offer-badge">-30%</div>
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Oferta Especial" 
+                             class="img-fluid rounded">
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="animate-on-scroll">
+                        <h3 class="mb-4">Oferta por Tiempo Limitado</h3>
+                        <p class="mb-4">
+                            ¡Aprovecha esta increíble oferta! Descuento del 30% en toda la colección 
+                            Nike Air Max. Oferta válida hasta agotar stock.
+                        </p>
+                        
+                        <div class="timer">
+                            <div class="timer-title">La oferta termina en:</div>
+                            <div class="timer-digits" id="countdown">
+                                <!-- Contador se llena con JavaScript -->
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Envío gratis</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> 30 días de garantía</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i> Devolución gratuita</li>
+                            </ul>
+                        </div>
+                        
+                        <button class="btn btn-primary btn-lg mt-3">
+                            <i class="bi bi-cart-plus me-2"></i> Aprovechar Oferta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+                <p class="section-subtitle">
+                    Más de 2,500 clientes satisfechos en todo Bolivia
+                </p>
+            </div>
+            
+            <div class="row g-4" id="testimonialsContainer">
+                <!-- Los testimonios se cargan dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content animate-on-scroll">
+                <h2 class="newsletter-title">¡No te pierdas las ofertas!</h2>
+                <p class="section-subtitle">
+                    Suscríbete a nuestro newsletter y recibe descuentos exclusivos
+                </p>
+                
+                <form class="newsletter-form" id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Tu correo electrónico" required>
+                        <button type="submit" class="btn-newsletter">
+                            <i class="bi bi-envelope me-2"></i> Suscribirme
+                        </button>
+                    </div>
+                </form>
+                
+                <p class="small mt-3 opacity-75">
+                    Al suscribirte aceptas nuestra Política de Privacidad
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Mejorado -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="footer-content">
+                        <div class="footer-logo">
+                            <div class="logo-icon">
+                                <i class="bi bi-lightning-charge"></i>
+                            </div>
+                            Zapatillas Bolivia
+                        </div>
+                        <p class="mb-4">
+                            Tu tienda de confianza para las mejores zapatillas en Bolivia. 
+                            Calidad, estilo y comodidad en un solo lugar.
+                        </p>
+                        
+                        <div class="social-links">
+                            <a href="#" class="social-link">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="bi bi-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Tienda</h5>
+                        <ul>
+                            <li><a href="#products"><i class="bi bi-chevron-right"></i> Productos</a></li>
+                            <li><a href="#categories"><i class="bi bi-chevron-right"></i> Categorías</a></li>
+                            <li><a href="#offers"><i class="bi bi-chevron-right"></i> Ofertas</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Nuevos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-4">
+                    <div class="footer-links">
+                        <h5>Ayuda</h5>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Preguntas Frecuentes</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Envíos</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Devoluciones</a></li>
+                            <li><a href="#"><i class="bi bi-chevron-right"></i> Garantía</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4 col-md-4">
+                    <div class="footer-links">
+                        <h5>Contacto</h5>
+                        <ul>
+                            <li><a href="#"><i class="bi bi-geo-alt"></i> Av. Bolívar 123, La Paz</a></li>
+                            <li><a href="tel:+59176543210"><i class="bi bi-telephone"></i> +591 76543210</a></li>
+                            <li><a href="mailto:info@zapatillasbolivia.com"><i class="bi bi-envelope"></i> info@zapatillasbolivia.com</a></li>
+                            <li><a href="#"><i class="bi bi-clock"></i> Lun - Vie: 9:00 - 18:00</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">&copy; 2024 Zapatillas Bolivia. Todos los derechos reservados.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="payment-methods">
+                            <i class="bi bi-credit-card payment-method"></i>
+                            <i class="bi bi-paypal payment-method"></i>
+                            <i class="bi bi-bank payment-method"></i>
+                            <i class="bi bi-cash-coin payment-method"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="bi bi-chevron-up"></i>
+    </a>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript personalizado nuevo -->
+    <script src="index-new.js"></script>
+    
+    <!-- JavaScript original (opcional, para compatibilidad) -->
+    <script src="script.js"></script>
+</body>
+</html>

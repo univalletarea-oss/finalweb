@@ -1,0 +1,247 @@
+:root {
+    --primary-color: #000;
+    --secondary-color: #f5f5f5;
+    --accent-color: #ff6b6b;
+    --bolivia-red: #D52B1E;
+    --bolivia-yellow: #F9E300;
+    --bolivia-green: #007934;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--secondary-color);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, var(--bolivia-red) 0%, var(--bolivia-yellow) 50%, var(--bolivia-green) 100%);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+/* Product Cards */
+.product-card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.product-img {
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-price {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.product-price-old {
+    font-size: 0.9rem;
+}
+
+/* Ofertas */
+.offer-card {
+    border: 2px solid var(--accent-color) !important;
+}
+
+.offer-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.section-title {
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 40px 0;
+}
+
+/* Modal Styles */
+.modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Form Styles */
+.form-control:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 107, 0.25);
+}
+
+/* Tooltip custom styles */
+.tooltip-inner {
+    background-color: var(--primary-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.tooltip.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: var(--primary-color);
+}
+
+/* Bolivia Theme Elements */
+.bolivia-flag {
+    background: linear-gradient(to bottom, var(--bolivia-red) 33%, var(--bolivia-yellow) 33% 66%, var(--bolivia-green) 66%);
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    border-radius: 2px;
+}
+
+/* Dashboard Styles */
+.stats-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stats-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.border-radius-custom {
+    border-radius: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 60px 0;
+    }
+    
+    .product-img {
+        height: 200px;
+    }
+    
+    .stats-number {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+    
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .stats-card {
+        padding: 15px;
+    }
+}
+
+/* Animaciones adicionales */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.offer-card {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Mejoras de accesibilidad */
+.btn:focus, .form-control:focus {
+    outline: 2px solid var(--bolivia-yellow);
+    outline-offset: 2px;
+}
+
+/* Enlaces del footer */
+footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Tablas responsivas */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
